@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Change Request Demo - Learningautomation.io</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Data-Table-1.css">
+    <link rel="stylesheet" href="assets/css/Data-Table.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Learningautomation.io</a><button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger">New Change</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Current Changes</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container">
+            <h1>Change Management</h1>
+            <hr class="star-light">
+            <h2 class="font-weight-light mb-0">Web Change Management System</h2>
+        </div>
+    </header>
+    <section id="portfolio" class="portfolio">
+        <div class="container" id="vueApp">
+            <h2 class="text-uppercase text-left text-secondary" style="padding-bottom: 38px;">Change Request {{changeRequestJSON[0].ChangeID}}</h2>
+            <div class="row">
+                <div class="col">
+                    <form action="/savechangerequest" method="get" target="_self" id="ChangeRequest">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th id="changerequest"><span style="text-decoration: underline;">Scheduling</span></th>
+                                        <th><input type="hidden" class="form-control" id="id" name="id" v-bind:value="changeRequestJSON[0].ChangeID" /></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Submitted Date:</strong></td>
+                                        <td>03/27/2019 10:05</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Planned Start Date:</strong></td>
+                                        <td>&nbsp;<input class="form-control" type="text" readonly="" id="startdate" v-bind:value="changeRequestJSON[0].Date + ' 3:00 am'"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Planned End Date:</strong></td>
+                                        <td><input class="form-control" type="text" readonly="" id="enddate" v-bind:value="changeRequestJSON[0].Date + ' 7:00 am'"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Change Type:</strong></td>
+                                        <td>Scheduled</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Requestor</td>
+                                        <td><input class="form-control" type="text" readonly="" id="Requestor"  v-bind:value="changeRequestJSON[0].Requestor"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Status</strong></td>
+                                        <td><input class="form-control" type="text" readonly="" id="Status" v-bind:value="changeRequestJSON[0].Status"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><span style="text-decoration: underline;">Change Information</span></strong></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Service</strong></td>
+                                        <td><input class="form-control" type="text" readonly="" id="Service" v-bind:value="changeRequestJSON[0].Service"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Classification</strong></td>
+                                        <td><input class="form-control" type="text" readonly="" id="Classification" v-bind:value="changeRequestJSON[0].Classification"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Client</strong></td>
+                                        <td><input class="form-control" type="text" readonly="" id="Client" v-bind:value="changeRequestJSON[0].Client"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Location</strong></td>
+                                        <td><input class="form-control" type="text" readonly="" id="Location" v-bind:value="changeRequestJSON[0].Location"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Environment</strong></td>
+                                        <td><input class="form-control" type="text" readonly="" id="Environment" v-bind:value="changeRequestJSON[0].Environment"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Description</strong></td>
+                                        <td><input class="form-control" type="text" readonly="" id="Description" v-bind:value="changeRequestJSON[0].Description"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Team</strong></td>
+                                        <td><select class="form-control" name="assignedTeam" v-bind:value="changeRequestJSON[0].Team"><optgroup label="Pick a Team"><option value="" selected=""></option><option value="Automation Team">Automation Team</option><option value="Data Team">Data Team</option><option value="Database Team">Database Team</option><option value="Development Team">Development Team</option><option value="Linux Team">Linux Team</option><option value="Network Team">Network Team</option><option value="Production Team">Production Team</option><option value="Project Mangement Team">Project Mangement Team</option><option value="Technical Architecture Team">Technical Architecture Team</option><option value="Web Services Team">Web Services Team</option><option value="Windows Team">Windows Team</option></optgroup></select></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><button class="btn btn-primary" type="submit" style="padding: 6px;margin-right: 49px;margin-left: 404px;margin-top: 20px;">Save/Submit</button><a class="btn btn-primary" role="button" href="index.html" style="margin-top: 20px;">Back</a></form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">HOME</h4>
+                </div>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase">Logout</h4>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-uppercase mb-4">HELP</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright ©&nbsp;Learningautomation.io 2018</small></div>
+    </div>
+    <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="d-block js-scroll-trigger text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+ 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/freelancer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+<script> 
+/************ VUE JS CODE STARTS HERE ************/
+
+var vm = new Vue({
+    el: '#vueApp',
+    data: {
+        changeRequestJSON: null
+    },
+    created: function created() {
+        var _this  = this;
+        $.getJSON('/getchangebyid?id=<%=req.query.id%>', function (data) {
+            _this.changeRequestJSON = data; //Get Change request data and put into a variable
+        });
+    }
+
+})
+
+/************ VUE JS CODE END ************/
+</script>
+
+</body>
+
+</html>
