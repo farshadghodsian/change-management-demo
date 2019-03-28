@@ -56,11 +56,11 @@
                                     </tr>
                                     <tr>
                                         <td><strong>Planned Start Date:</strong></td>
-                                        <td>&nbsp;<input class="form-control" type="text" readonly="" id="startdate" v-bind:value="changeRequestJSON[0].Date + ' 3:00 am'"></td>
+                                        <td id="startdate">{{changeRequestJSON[0].Date}} 3:00 am</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Planned End Date:</strong></td>
-                                        <td><input class="form-control" type="text" readonly="" id="enddate" v-bind:value="changeRequestJSON[0].Date + ' 7:00 am'"></td>
+                                        <td id="enddate">{{changeRequestJSON[0].Date}} 7:00 am</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Change Type:</strong></td>
@@ -71,11 +71,11 @@
                                     </tr>
                                     <tr>
                                         <td>Requestor</td>
-                                        <td><input class="form-control" type="text" readonly="" id="Requestor"  v-bind:value="changeRequestJSON[0].Requestor"></td>
+                                        <td id="Requestor">{{changeRequestJSON[0].Requestor}}</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Status</strong></td>
-                                        <td><input class="form-control" type="text" readonly="" id="Status" v-bind:value="changeRequestJSON[0].Status"></td>
+                                        <td id="Status">{{changeRequestJSON[0].Status}}</td>
                                     </tr>
                                     <tr>
                                         <td></td>
@@ -87,27 +87,27 @@
                                     </tr>
                                     <tr>
                                         <td><strong>Service</strong></td>
-                                        <td><input class="form-control" type="text" readonly="" id="Service" v-bind:value="changeRequestJSON[0].Service"></td>
+                                        <td id="Service">{{changeRequestJSON[0].Service}}</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Classification</strong></td>
-                                        <td><input class="form-control" type="text" readonly="" id="Classification" v-bind:value="changeRequestJSON[0].Classification"></td>
+                                        <td id="Classification">{{changeRequestJSON[0].Classification}}</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Client</strong></td>
-                                        <td><input class="form-control" type="text" readonly="" id="Client" v-bind:value="changeRequestJSON[0].Client"></td>
+                                        <td id="Client">{{changeRequestJSON[0].Client}}</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Location</strong></td>
-                                        <td><input class="form-control" type="text" readonly="" id="Location" v-bind:value="changeRequestJSON[0].Location"></td>
+                                        <td id="Location">{{changeRequestJSON[0].Location}}</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Environment</strong></td>
-                                        <td><input class="form-control" type="text" readonly="" id="Environment" v-bind:value="changeRequestJSON[0].Environment"></td>
+                                        <td id="Environment">{{changeRequestJSON[0].Environment}}</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Description</strong></td>
-                                        <td><input class="form-control" type="text" readonly="" id="Description" v-bind:value="changeRequestJSON[0].Description"></td>
+                                        <td id="Description">{{changeRequestJSON[0].Description}}</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Team</strong></td>
