@@ -7,6 +7,4 @@ app/cert/key.pem
 npm-debug.log
 .vagrant/
 package-lock.json
-app/public/assets
-app/public/static
 secret.js

@@ -1,7 +1,7 @@
 {
-  "name": "masterserverlist",
+  "name": "changemanagementdemo",
   "version": "1.0.0",
-  "description": "Master Server List Search Tool",
+  "description": "Change Management Demo",
   "main": "app.js",
   "scripts": {
     "start": "node app/app.js",
