@@ -10,10 +10,10 @@ module.exports =
 		client: "mysql",
 		connection: 
 		{
-			host    : process.env.mysql-host,
-			user    : process.env.mysql-user,
-			database: process.env.mysql-db,
-			password: process.env.msql-pass,
+			host    : process.env.mysqlhost,
+			user    : process.env.mysqluser,
+			database: process.env.mysqldb,
+			password: process.env.msqlpass,
 		},
 		debug: false
 	}
