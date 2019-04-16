@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------
 //  Config file for KNEX.JS connection including database credentials
 //-------------------------------------------------------------------
-var secret = require('./secret');
+var secret = require('../secret');
 
 module.exports = 
 {
