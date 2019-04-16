@@ -14,7 +14,7 @@ module.exports =
 			port	: process.env.mysqlport,
 			user    : process.env.mysqluser,
 			database: process.env.mysqldb,
-			password: process.env.msqlpass,
+			password: process.env.mysqlpass,
 		},
 		debug: false
 	}
